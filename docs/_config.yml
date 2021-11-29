@@ -1,0 +1,20 @@
+name: GCS2020 Theme
+url: https://gitcommit.show 
+baseurl: # / 
+
+
+name: Parth Krishna
+email: thenerdsuperuser@gmail.com
+
+markdown: kramdown
+highlighter: rouge
+
+# Markdown Processors
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+

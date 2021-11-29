@@ -1,0 +1,47 @@
+{% include header.html %}
+
+<main>
+	<section class="presentation">
+		<div class="introduction">
+			<div class="intro-text">
+				<h1>{{ page.title }}</h1>
+				<h4>{{ page.position }} at {{ page.organization }}</h4>
+				<p id="small" align=”justify” style="font-size:12px;">
+				{{ content }}
+				</p>
+
+
+						{% if page.twitter %}
+								{% capture twitter %}
+										{{ page.twitter }}
+								{% endcapture %}
+						{% include twitter.html twitter_url=twitter %}
+						{% endif %}
+
+
+						{% if page.github %}
+								{% capture github %}
+										{{ page.github }}
+								{% endcapture %}
+						{% include github.html github_url=github %}
+						{% endif %}
+
+
+						{% if page.linkedin %}
+								{% capture linkedin %}
+										{{ page.linkedin }}
+								{% endcapture %}
+						{% include linkedin.html linkedin_url=linkedin %}
+						{% endif %}
+
+
+			</div>
+		</div>
+		<div class="cover">
+			<img src={{ page.image }} alt="speaker" />
+		</div>
+	</section>
+</main>
+</body>
+
+{% include footer.html %}
